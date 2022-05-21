@@ -27,10 +27,9 @@ app.listen(PORT, () => {
 /**
  * API call for HOME
  */
-const query = utility.getImgCatgNames(),
-  color = 'Red';
-
 app.get("/api", (req, res) => {
+  const query = utility.getImgCatgNames(),
+    color = 'Red';
   client.photos.search({
     query,
     // color,
